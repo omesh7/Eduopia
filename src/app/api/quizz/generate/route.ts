@@ -7,6 +7,8 @@ import { JsonOutputFunctionsParser } from "langchain/output_parsers";
 import saveQuizz from "./saveToDb";
 import { getLoader } from "./helper";
 
+export const runtime = 'edge';
+
 export async function POST(req: NextRequest) {
   const body = await req.formData();
   const document = body.get("document");
